@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Legislation Activity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 390px); /* 2 columns for better layout with 4 items */
+            gap: 20px; /* Space between grid items */
+            max-width: 800px; /* Adjust as needed */
+            padding: 20px;
+        }
+
+        .reveal-item {
+            width: 390px;
+            height: 275px;
+            position: relative;
+            overflow: hidden; /* Crucial for the sliding effect */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            background-color: #fff;
+        }
+
+        .reveal-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures images cover the area without distortion */
+            display: block;
+            transition: transform 0.5s ease-in-out; /* Smooth transition for image if needed later */
+        }
+
+        .plus-icon {
+            position: absolute;
+            bottom: 15px; /* Moves it 15px up from the bottom edge */
+            right: 15px;  /* Moves it 15px left from the right edge */
+            font-size: 3em; /* Makes the '+' sign text smaller */
+            color: white; /* White plus sign */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            border-radius: 50%;
+            width: 60px;    /* Smaller circular background */
+            height: 60px;   /* Smaller circular background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none; /* Prevent text selection */
+            transition: background-color 0.3s ease;
+            z-index: 2; /* Ensure it's above the image but below the info panel */
+        }
+
+        .plus-icon:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .info-panel {
+            position: absolute;
+            bottom: -100%; /* Start off-screen at the bottom */
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #C3ACE8; /* UPDATED to lighter purple brand color */
+            color: #333; /* Keeping text dark for contrast */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: bottom 0.6s ease-out; /* Smooth sliding effect */
+            z-index: 1; /* Below the plus icon initially, then covers the image */
+            text-align: center;
+        }
+
+        .info-panel h3 {
+            margin-top: 0;
+            color: #532A8C; /* You might want to use your dark purple here for headings */
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .info-panel p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0 10px; /* Added some horizontal padding */
+            text-align: justify; /* Justify text for better readability */
+        }
+
+        .reveal-item.active .info-panel {
+            bottom: 0; /* Slide up to cover the image */
+        }
+
+        .reveal-item.active .plus-icon {
+            display: none; /* Hide the plus icon when info is revealed */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="reveal-item">
+            <img src="Health Practitioner Regulation National Law - via Ahpra.png" alt="Health Practitioner Regulation National Law - via Ahpra">
+            <div class="plus-icon">+</div>
+            <div class="info-panel">
+                <h3>Health Practitioner Regulation National Law - via Ahpra</h3>
+                <p>This law ensures that only qualified and registered professionals can provide healthcare in Australia. It is managed by the Australian Health Practitioner Regulation Agency (Ahpra). For dental practices, this includes dentists, dental hygienists, and oral health therapists. Dental assistants must also work within the supervision and scope of these registered professionals.</p>
+            </div>
+        </div>
+
+        <div class="reveal-item">
+            <img src="Poisons and Therapeutic Goods Act 2001 - NSW.png" alt="Poisons and Therapeutic Goods Act 2001 - NSW">
+            <div class="plus-icon">+</div>
+            <div class="info-panel">
+                <h3>2. Poisons and Therapeutic Goods Act 2001 - NSW</h3>
+                <p>This Act controls how medications, anaesthetics, and dental materials (like fluoride and disinfectants) are stored, prescribed, used, and disposed of. It ensures that substances classified as Schedule drugs (e.g. Schedule 4 or 8 medicines) are used safely and only by authorised personnel.</p>
+                <p>Why it matters in dentistry: Dental assistants may handle or assist with medications and therapeutic goods. It’s important to understand what substances you can legally manage and how to do so safely, especially in terms of storage, labelling, and disposal.</p>
+            </div>
+        </div>
+
+        <div class="reveal-item">
+            <img src="Health Records and Information Privacy Act 2002 - NSW .png" alt="Health Records and Information Privacy Act 2002 - NSW">
+            <div class="plus-icon">+</div>
+            <div class="info-panel">
+                <h3>3. Health Records and Information Privacy Act 2002 - NSW</h3>
+                <p>This law protects personal health information. Dental practices must ensure that patient records are stored securely, shared only with authorised individuals, and kept private at all times.</p>
+                <p>Why it matters: As a dental assistant, you may handle patient records, forms, or digital systems. You must never share a patient’s personal information without permission and must follow strict privacy procedures to avoid legal breaches.</p>
+            </div>
+        </div>
+
+        <div class="reveal-item">
+            <img src="Radiation Control Act - NSW.png" alt="Radiation Control Act - NSW">
+            <div class="plus-icon">+</div>
+            <div class="info-panel">
+                <h3>4. Radiation Control Act - NSW</h3>
+                <p>This Act regulates the use of radiation-producing equipment (e.g., X-ray machines) in healthcare. It ensures that all radiation exposure is minimised and that staff operating or working around these machines are properly trained and protected. In NSW, the EPA regulates the use of radiation through the Protection from Harmful Radiation Act 1990 (the Act) and Protection from Harmful Radiation Regulation 2013 (the Regulation).</p>
+                <p>Why it matters in a dental practice: Even if you are not operating the X-ray machine, you need to follow safety procedures like standing behind barriers, wearing PPE, and ensuring patients are shielded. Only trained staff can perform radiographic procedures, and safety zones must be respected.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealItems = document.querySelectorAll('.reveal-item');
+
+            revealItems.forEach(item => {
+                const plusIcon = item.querySelector('.plus-icon');
+
+                plusIcon.addEventListener('click', () => {
+                    // Toggle the 'active' class on the parent reveal-item
+                    item.classList.toggle('active');
+                });
+
+                // Optional: Allow clicking the revealed info panel to hide it again
+                const infoPanel = item.querySelector('.info-panel');
+                infoPanel.addEventListener('click', () => {
+                    item.classList.remove('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
